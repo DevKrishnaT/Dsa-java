@@ -1,6 +1,4 @@
-package lession_1.topic_group_1.questions;
-
-import java.util.Arrays;
+package lession_1.topic_group_1.questions.patterns;
 
 public class patter_5 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.questions;
+package lession_1.topic_group_1.questions.basic_q;
 
 public class secLargest {
     public static void main(String[] args) {

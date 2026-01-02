@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.questions;
+package lession_1.topic_group_1.questions.basic_q;
 
 public class finXinArr {
     public static int find(int[] arr, int x){

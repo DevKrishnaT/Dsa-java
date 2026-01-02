@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.questions;
+package lession_1.topic_group_1.questions.patterns;
 
 public class patter_advance_2 {
     public static void main(String[] args) {

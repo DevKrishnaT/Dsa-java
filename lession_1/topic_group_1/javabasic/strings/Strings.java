@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.javabasic;
+package lession_1.topic_group_1.javabasic.strings;
 
 public class Strings {
     public static void main(String[] args) {
@@ -6,5 +6,6 @@ public class Strings {
         String b = "z";
 
         System.out.println(s.compareTo(b));
+        System.out.println("hello");
     }
 }

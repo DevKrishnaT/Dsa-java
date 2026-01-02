@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.javabasic;
+package lession_1.topic_group_1.javabasic.array;
 
 import java.util.Scanner;
 

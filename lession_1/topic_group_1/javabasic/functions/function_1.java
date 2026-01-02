@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.javabasic;
+package lession_1.topic_group_1.javabasic.functions;
 
 public class function_1 {
     public static int add(int a ,int  b){

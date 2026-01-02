@@ -1,6 +1,5 @@
-package lession_1.topic_group_1.javabasic;
+package lession_1.topic_group_1.javabasic.conditional;
 
-import java.lang.invoke.SwitchPoint;
 import java.util.Scanner;
 
 public class switchLearn {
