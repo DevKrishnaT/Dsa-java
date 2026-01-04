@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.maps.linkedhashmap;
+package lession_1.topic_group_1.collection_framework.maps.linkedhashmap;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.maps.sortedMAp;
+package lession_1.topic_group_1.collection_framework.maps.sortedMAp;
 
 import java.util.SortedMap;
 import java.util.TreeMap;

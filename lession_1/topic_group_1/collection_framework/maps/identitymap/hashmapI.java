@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.maps.identitymap;
+package lession_1.topic_group_1.collection_framework.maps.identitymap;
 
 import java.util.HashMap;
 import java.util.IdentityHashMap;

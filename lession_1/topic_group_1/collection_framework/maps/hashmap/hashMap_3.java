@@ -1,4 +1,4 @@
-package lession_1.topic_group_1.maps.hashmap;
+package lession_1.topic_group_1.collection_framework.maps.hashmap;
 
 import java.util.HashMap;
 import java.util.Objects;
