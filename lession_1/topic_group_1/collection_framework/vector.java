@@ -13,6 +13,7 @@ public class vector {
         v1.add(5);
 
         System.out.println(v1);
+        System.out.println(v1);
 
     }
 }
