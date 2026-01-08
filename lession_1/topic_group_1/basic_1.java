@@ -1,7 +1,0 @@
-package lession_1.topic_group_1;
-
-public class basic_1 {
-    public static void main(String[] args) {
-        System.out.println("hello java!");
-    }
-}
