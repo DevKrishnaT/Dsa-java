@@ -4,20 +4,20 @@ import java.util.Arrays;
 
 public class NextPermutaion {
     public static void main(String[] args) {
-        int[] nums = {1, 2};
-        for (int i = nums.length - 1; i > 0; i--) {
+        int[] nums = {3, 2, 1};
+        for (int i = nums.length - 1; i >= 1; i--) {
             if (nums[i] > nums[i - 1]) {
-                int tmep = nums[i];
+                int temp = nums[i];
                 nums[i] = nums[i - 1];
-                nums[i - 1] = tmep;
+                nums[i - 1] = temp;
                 break;
+            } else if (i == 1) {
+                int temp = nums[i - 1];
+                nums[i - 1] = nums[nums.length - 1];
+                nums[nums.length - 1] = temp;
             } else {
-                int tmep = nums[i];
-                nums[i] = nums[0];
-                nums[0] = tmep;
+                continue;
             }
-
-
         }
         System.out.println(Arrays.toString(nums));
     }
