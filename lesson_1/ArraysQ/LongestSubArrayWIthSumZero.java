@@ -1,9 +1,8 @@
 package lesson_1.ArraysQ;
 
-import java.util.Arrays;
 import java.util.HashMap;
 
-public class longestSubArrayNegative {
+public class LongestSubArrayWIthSumZero {
     public static void main(String[] args) {
         int[] arr = {2, 10, 4};
         int k = 0;
@@ -14,11 +13,9 @@ public class longestSubArrayNegative {
             prefix += arr[i];
             if (prefix == k) maxLength = Math.max(maxLength, i + 1);
             if (!(Map.containsKey(prefix))) Map.put(prefix, i);
-            if (Map.containsKey(prefix - k)) maxLength = Math.max(maxLength, i - Map.get(prefix - k));
+            if (Map.containsKey(prefix)) maxLength = Math.max(maxLength, i - Map.get(prefix));
 
         }
         System.out.println(maxLength);
-
-
     }
 }
