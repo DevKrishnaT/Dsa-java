@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class LongestSubArrayWIthSumZero {
     public static void main(String[] args) {
-        int[] arr = {2, 10, 4};
+        int[] arr = {15, -2, 2, -8, 1, 7, 10};
         int k = 0;
         HashMap<Integer, Integer> Map = new HashMap<>();
         int prefix = 0;
