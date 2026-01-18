@@ -13,7 +13,7 @@ public class RevresePair {
                 long doubleVal = (long) nums[right] * 2;
                 if (doubleVal < nums[i]) {
                     count++;
-
+                    int ans = 0;
                 }
                 right--;
             }
