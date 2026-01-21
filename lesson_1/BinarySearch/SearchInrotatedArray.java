@@ -8,7 +8,7 @@ public class SearchInrotatedArray {
         System.out.println(idx);
     }
 
-    private static int search(int[] nums, int target) {
+    static int search(int[] nums, int target) {
         int idx = -1;
         int left = 0;
         int right = nums.length - 1;
