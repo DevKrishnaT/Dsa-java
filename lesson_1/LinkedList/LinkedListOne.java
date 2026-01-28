@@ -5,10 +5,10 @@ class LL {
     Node head;
 
     class Node {
-        String data;
+        Integer data;
         Node next;
 
-        Node(String data) {
+        Node(Integer data) {
             this.data = data;
             this.next = null;
 
@@ -17,7 +17,7 @@ class LL {
 
     }
 
-    public void addfirst(String data) {
+    public void addfirst(Integer data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -28,7 +28,7 @@ class LL {
         head = newNode;
     }
 
-    public void addLast(String data) {
+    public void addLast(Integer data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -42,6 +42,30 @@ class LL {
 
         currentNode.next = newNode;
     }
+
+    public void AddAtNth(Integer x, Integer n) {
+        Node newNode = new Node(x);
+
+        if (n == 0) {
+            newNode.next = head.next;
+            head = newNode;
+            return;
+        }
+        Node current = head;
+
+
+        for (int i = 0; i < n - 1; i++) {
+            if (current == null) {
+                return;
+            }
+            current = current.next;
+
+        }
+
+        newNode.next = current.next;
+        current.next = newNode;
+    }
+
 
     public void Treverse() {
         if (head == null) {
@@ -58,9 +82,11 @@ class LL {
 
     public static void main(String[] args) {
         LL list = new LL();
-        list.addfirst("we");
-        list.addLast("go");
-        list.addfirst("here");
+        list.addfirst(2);
+        list.addLast(3);
+        list.addfirst(5);
+        list.Treverse();
+        list.AddAtNth(38, 2);
         list.Treverse();
     }
 
