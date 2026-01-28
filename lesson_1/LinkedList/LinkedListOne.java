@@ -80,6 +80,19 @@ class LL {
         System.out.println("null");
     }
 
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;
+
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     public static void main(String[] args) {
         LL list = new LL();
         list.addfirst(2);
@@ -87,6 +100,8 @@ class LL {
         list.addfirst(5);
         list.Treverse();
         list.AddAtNth(38, 2);
+        list.Treverse();
+        list.reverse();
         list.Treverse();
     }
 
