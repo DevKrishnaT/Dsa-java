@@ -149,6 +149,23 @@ class DoublyList {
         }
         System.out.println();
     }
+
+    public void reveser() {
+        Node curr = head;
+        Node temp = null;
+        while (curr != null) {
+            temp = curr.prev;
+            curr.prev = curr.next;
+            curr.next = temp;
+            curr = curr.prev;
+        }
+
+        if (temp != null) {
+            head = temp.prev;
+        }
+
+
+    }
 }
 
 public class Doubly {
@@ -165,6 +182,8 @@ public class Doubly {
         list.PushBack(65);
         list.Treverse();
         list.PushtAtNth(999, 0);
+        list.Treverse();
+        list.reveser();
         list.Treverse();
     }
 }

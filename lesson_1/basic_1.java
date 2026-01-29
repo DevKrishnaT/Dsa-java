@@ -2,6 +2,9 @@ package lesson_1;
 
 public class basic_1 {
     public static void main(String[] args) {
-        System.out.println("hello java!");
+        int count = 12345;
+        int copy = count;
+
+
     }
 }

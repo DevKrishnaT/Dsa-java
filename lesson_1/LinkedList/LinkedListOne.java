@@ -93,15 +93,40 @@ class LL {
         head = prev;
     }
 
+    public Node removeNthFromEnd(Integer N) {
+        if (head == null) {
+            return head;
+        }
+
+        Node legth = head;
+        int count = 0;
+        while (legth != null) {
+            count++;
+            legth = legth.next;
+        }
+        count = count - N;
+        Node curr = head;
+
+        for (int i = 0; i < count - 1; i++) {
+
+            curr = curr.next;
+
+
+        }
+        if (curr.next == null) {
+            return head = null;
+        } else {
+            curr.next = curr.next.next;
+        }
+        return head;
+
+    }
+
     public static void main(String[] args) {
         LL list = new LL();
-        list.addfirst(2);
-        list.addLast(3);
-        list.addfirst(5);
-        list.Treverse();
-        list.AddAtNth(38, 2);
-        list.Treverse();
-        list.reverse();
+        list.addLast(1);
+
+        list.removeNthFromEnd(1);
         list.Treverse();
     }
 
