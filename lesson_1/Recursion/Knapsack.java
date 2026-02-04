@@ -3,7 +3,7 @@ package lesson_1.Recursion;
 import java.util.HashMap;
 
 public class Knapsack {
-    static HashMap<String, Integer> memo = new HashMap<>();
+    static Integer[][] memo;
 
     static void main(String[] args) {
         int W = 4;
@@ -14,16 +14,17 @@ public class Knapsack {
     }
 
     private static int knapsack(int W, int[] val, int[] wt) {
-        return find(0, 0, W, val, wt);
+        memo = new Integer[wt.length][W + 1];
+        return find(0, 0, W, wt, val);
     }
 
     private static int find(int idx, int currentWaght, int w, int[] val, int[] wt) {
         if (idx == wt.length) {
             return 0;
         }
-
+        if (memo[idx][currentWaght] != null) return memo[idx][currentWaght];
         int exclude = find(idx + 1, currentWaght, w, val, wt);
-        String key = idx +
+
 
         int include = 0;
 
@@ -32,7 +33,8 @@ public class Knapsack {
                     currentWaght + wt[idx],
                     w, val, wt);
         }
-        return Math.max(include, exclude);
+        memo[idx][currentWaght] = Math.max(include, exclude);
+        return memo[idx][currentWaght];
     }
 
 
