@@ -2,7 +2,7 @@ package lesson_1.BitManupulation;
 
 public class IntegerTobit {
     static void main(String[] args) {
-        int n = 15;
+        int n = Integer.MAX_VALUE;
         String ans = Covert(n);
         System.out.println(ans);
 
