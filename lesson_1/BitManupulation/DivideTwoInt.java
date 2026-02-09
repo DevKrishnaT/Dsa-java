@@ -18,7 +18,7 @@ public class DivideTwoInt {
 
         long a = Math.abs((long) dividend);
         long b = Math.abs((long) divisor);
-
+        
 
         int result = 0;
 
