@@ -1,4 +1,4 @@
-package lesson_1.questions.leetcode;
+package lesson_1.Stack.MonotonicSrack;
 
 import java.util.Arrays;
 import java.util.HashMap;

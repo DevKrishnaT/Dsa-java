@@ -1,12 +1,10 @@
-package lesson_1.questions.leetcode;
+package lesson_1.Stack.MonotonicSrack;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 public class SumSubarrayMins {
     static void main(String[] args) {
-        int[] nums = {11, 81, 94, 43, 3};
+        int[] nums = {2, 1, 5, 6, 2, 3};
 
         int total = sumSubarrayMins(nums);
         System.out.println(total);
