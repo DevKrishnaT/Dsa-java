@@ -1,8 +1,8 @@
-package Implementation;
+package Heap.Implimentation;
 
-public class MainMinHeap {
+public class MainMaxHeap {
     static void main(String[] args) {
-        MinHeap heap = new MinHeap();
+        MaxHeap heap = new MaxHeap();
         heap.insert(10);
         heap.insert(24);
         heap.insert(14);
