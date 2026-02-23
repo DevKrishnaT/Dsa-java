@@ -8,6 +8,7 @@ public class Subsets {
         int[] arr = {1, 2, 3};
         List<List<Integer>> list = new ArrayList<>();
         BackTracking(list, new ArrayList<>(), arr, 0);
+        System.out.println(list);
     }
 
     private static void BackTracking(List<List<Integer>> list, ArrayList<Integer> smallerList, int[] arr, int index) {
