@@ -1,0 +1,32 @@
+package Heap.Questions;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.PriorityQueue;
+
+class KthLargest {
+    private PriorityQueue<Integer> heap;
+    private int k;
+
+    public KthLargest(int k, int[] nums) {
+        this.k = k;
+        heap = new PriorityQueue<>();
+        for (int i : nums) {
+            add(i);
+        }
+
+
+    }
+
+    public int add(int val) {
+        heap.offer(val);
+
+        if (heap.size() > k) {
+            heap.poll();
+        }
+        return heap.peek();
+    }
+}
+
+public class KthLargestInStream {
+}
