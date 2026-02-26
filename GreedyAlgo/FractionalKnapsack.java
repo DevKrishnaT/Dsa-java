@@ -2,18 +2,18 @@ package GreedyAlgo;
 
 import java.util.*;
 
-public class FractionalKnapsack {
-    static class Item {
-        int value;
-        int weight;
-        double ratio;
+class Item {
+    int value;
+    int weight;
+    double ratio;
 
-        Item(int value, int weight) {
-            this.value = value;
-            this.weight = weight;
-            ;
-            this.ratio = (double) value / weight;
-        }
+    Item(int value, int weight) {
+        this.value = value;
+        this.weight = weight;
+        ;
+        this.ratio = (double) value / weight;
+
+
     }
 
     static void main(String[] args) {
