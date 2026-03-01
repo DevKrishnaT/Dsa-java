@@ -19,7 +19,7 @@ public class MinPlatform {
         int j = 0;
         int platform = 1;
         int max = 1;
-
+                                                   
         while (i < n && j < n) {
             if (arr[i] <= dep[j]) {
                 platform++;
