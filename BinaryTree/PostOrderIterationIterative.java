@@ -16,11 +16,36 @@ public class PostOrderIterationIterative {
 
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
-        List<Integer> ans = postOrderIterationIterative(root);
+        List<Integer> ans = postOrderIterationIterative1Stack(root);
         System.out.println(ans);
     }
 
-    private static List<Integer> postOrderIterationIterative(TreeNode root) {
+    private static List<Integer> postOrderIterationIterative1Stack(TreeNode root) {
+        ArrayList<Integer> list = new ArrayList<>();
+        if (root == null) return list;
+
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode current = root;
+        TreeNode lastVisited = null;
+        while (current != null || !stack.isEmpty()) {
+            if (current != null) {
+                stack.add(current);
+                current = current.left;
+            } else {
+                TreeNode peekNode = stack.peek();
+
+                if (peekNode.right != null && peekNode.right != lastVisited) {
+                    current = peekNode.right;
+                } else {
+                    list.add(peekNode.val);
+                    lastVisited = stack.pop();
+                }
+            }
+        }
+        return list;
+    }
+
+    private static List<Integer> postOrderIterationIterative2Stack(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
         if (root == null) return list;
         Stack<TreeNode> stack1 = new Stack<>();
