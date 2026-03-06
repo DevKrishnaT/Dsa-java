@@ -28,6 +28,7 @@ public class DiameterOfBinaryTree {
         int right = find(root.right);
 
         maxi = Math.max(maxi, left + right);
+        ;
 
         return 1 + Math.max(left, right);
     }
