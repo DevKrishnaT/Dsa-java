@@ -1,9 +1,9 @@
 package BinaryTree;
 
-public class SameTree {
+public class IsSameTree {
     static void main(String[] args) {
         TreeNode t1 = new TreeNode(1);
-        t1.left = new TreeNode(2);
+        t1.left = new TreeNode(8);
         t1.right = new TreeNode(3);
 
 
@@ -32,9 +32,5 @@ public class SameTree {
 
         return isSameTree(p.left, q.left) &&
                 isSameTree(p.right, q.right);
-
-
     }
 }
-
-
