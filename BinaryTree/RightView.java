@@ -4,8 +4,10 @@ import java.util.*;
 
 public class RightView {
 
+    static int maxLevel = -1;
 
     static void main(String[] args) {
+
         TreeNode root = new TreeNode(1);
 
         root.left = new TreeNode(2);
@@ -14,11 +16,28 @@ public class RightView {
         root.left.left = new TreeNode(4);
 
         root.left.left.left = new TreeNode(5);
-        List<Integer> result = rightSideView(root);
+        ArrayList<Integer> result = new ArrayList<>();
+        maxLevel = -1;
+        rightSideView(root, 0, result);
+
         System.out.println(result);
     }
 
-    private static List<Integer> rightSideView(TreeNode root) {
+    private static void rightSideView(TreeNode root, int max, ArrayList<Integer> list) {
+
+        if (root == null) return;
+
+        if (max > maxLevel) {
+            list.add(root.val);
+            maxLevel = max;
+        }
+        rightSideView(root.right, max + 1, list);
+        rightSideView(root.left, max + 1, list);
+
+    }
+
+
+    private static List<Integer> rightSideViewBfs(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) return result;
 
