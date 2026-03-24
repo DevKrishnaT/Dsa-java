@@ -4,10 +4,12 @@ import java.util.*;
 
 public class LadderLengthII {
     class pair {
+        List<String> list;
         String word;
         int num;
 
-        pair(String word, int num) {
+        pair(List<String> list, String word, int num) {
+            this.list = list;
             this.word = word;
             this.num = num;
         }
@@ -25,40 +27,48 @@ public class LadderLengthII {
         HashSet<String> Lst = new HashSet<>(wordList);
         List<List<String>> ans = new ArrayList<>();
         if (!Lst.contains(endWord)) return ans;
-        Queue<LadderLength.pair> queue = new LinkedList<>();
+        Queue<List<String>> queue = new LinkedList<>();
+        HashSet<String> visited = new HashSet<>(wordList);
 
-        queue.add(new LadderLength.pair(beginWord, 1));
+        queue.add(Arrays.asList(beginWord));
+        boolean found = false;
+        while (!queue.isEmpty() && !found) {
+            int size = queue.size();
+            visited.clear();
+            for (int i = 0; i < size; i++) {
+                List<String> path = queue.poll();
+                String word = path.getLast();
+                char[] arr = word.toCharArray();
+                for (int j = 0; j < arr.length; j++) {
+                    char original = arr[j];
+                    for (char c = 'a'; c <= 'z'; c++) {
+                        if (c == original) continue;
 
-        ArrayList<String> comp = new ArrayList<>();
-        int num = Integer.MAX_VALUE;
-        while (!queue.isEmpty()) {
-            LadderLength.pair curr = queue.poll();
-            comp.add(curr.word);
-            if (Objects.equals(curr.word, endWord) && num >= curr.num) {
-                num = curr.num;
-                ans.add(new ArrayList<>(comp));
-            }
+                        arr[j] = c;
+                        String newWord = new String(arr);
 
-            char[] arr = curr.word.toCharArray();
-            for (int i = 0; i < arr.length; i++) {
-                char original = arr[i];
-                for (char c = 'a'; c <= 'z'; c++) {
-                    if (c == original) continue;
-                    arr[i] = c;
-
-                    String newWord = new String(arr);
-
-                    if (Lst.contains(newWord)) {
-                        queue.add(new LadderLength.pair(newWord, curr.num + 1));
-                        Lst.remove(newWord);
+                        if (Lst.contains(newWord)) {
+                            List<String> newPath = new ArrayList<>(path);
+                            newPath.add(newWord);
+                            if (newWord.equals(endWord)) {
+                                ans.add(newPath);
+                                found = true;
+                            } else {
+                                queue.add(newPath);
+                            }
+                        }
                     }
+
+                    arr[j] = original;
+
                 }
-                arr[i] = original;
+            }
+            for (String w : visited) {
+                Lst.remove(w);
             }
 
         }
 
         return ans;
-
     }
 }
