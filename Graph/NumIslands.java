@@ -41,6 +41,7 @@ public class NumIslands {
             return;
         }
         grid[i][j] = '0';
+        ;
         makeItWaterII(grid, i - 1, j);
         makeItWaterII(grid, i + 1, j);
         makeItWaterII(grid, i, j - 1);
