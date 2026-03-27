@@ -13,7 +13,6 @@ public class IsBipartite {
         int n = graph.length;
         int[] color = new int[n];
         Arrays.fill(color, -1);
-
         for (int i = 0; i < n; i++) {
             if (color[i] == -1) {
                 if (!dfs(graph, color, i, 0)) return false;
@@ -24,11 +23,10 @@ public class IsBipartite {
 
     private boolean dfs(int[][] graph, int[] color, int node, int col) {
         color[node] = col;
-
-        for (int nei : graph[node]) {
-            if (color[nei] == -1) {
-                if (!dfs(graph, color, nei, 1 - col)) return false;
-            } else if (color[nei] == col) {
+        for (int neigh : graph[node]) {
+            if (color[neigh] == -1) {
+                if (!dfs(graph, color, neigh, 1 - col)) return false;
+            } else if (color[neigh] == col) {
                 return false;
             }
         }
