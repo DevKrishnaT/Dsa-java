@@ -63,6 +63,7 @@ public class Sortestpath {
                     distance[neigh] = distance[node] + 1;
                     queue.add(new pair(neigh, distance[neigh]));
                 }
+                ;
             }
 
         }
