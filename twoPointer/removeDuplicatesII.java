@@ -15,6 +15,7 @@ public class removeDuplicatesII {
             if (i < 2 || n != nums[i - 2]) {
                 nums[i] = n;
                 i++;
+                ;
             }
         }
 
