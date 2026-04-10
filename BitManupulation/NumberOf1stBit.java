@@ -4,6 +4,7 @@ public class NumberOf1stBit {
     static void main(String[] args) {
         int n = 1111110;
         int ans = count(n);
+        System.out.println(ans);
     }
 
     private static int count(int n) {
