@@ -5,6 +5,7 @@ public class SmallestSetBit {
         int n = 5;
         int ans = smallest(n);
         System.out.println(ans);
+        System.out.println(ans);
     }
 
     private static int smallest(int n) {
