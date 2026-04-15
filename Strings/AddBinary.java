@@ -5,6 +5,7 @@ public class AddBinary {
         String a = "101";
         String b = "10001";
         String ans = addBinary(a, b);
+        System.out.println(ans);
     }
 
     public String addBinary(String a, String b) {
