@@ -9,6 +9,7 @@ public class CycleDetection {
         int V = 4;
         boolean ans = isCycle(edges, V);
         System.out.println(ans);
+        ;
     }
 
     private static boolean isCycle(int[][] edges, int V) {
