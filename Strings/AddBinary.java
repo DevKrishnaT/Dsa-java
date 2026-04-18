@@ -28,6 +28,7 @@ public class AddBinary {
                 sum += b.charAt(j) - '0';
                 j--;
             }
+            ;
 
             result.append(sum % 2);
             carry = sum / 2;
