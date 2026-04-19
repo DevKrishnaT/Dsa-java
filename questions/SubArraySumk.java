@@ -10,6 +10,7 @@ public class SubArraySumk {
         int k = 12;
         ArrayList<Integer> ans = subarraySum(arr, k);
         System.out.println(ans);
+        ;
     }
 
     private static ArrayList<Integer> subarraySum(int[] arr, int k) {
