@@ -3,7 +3,7 @@ package Strings;
 public class RotateString {
     public static void main(String[] args) {
         String s = "abcde";
-        String goal = "cdeab";
+        String goal = "cdeabfh";
         boolean ans = rotateString(s, goal);
         System.out.println(ans);
     }
