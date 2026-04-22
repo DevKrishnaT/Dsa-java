@@ -2,7 +2,7 @@ package Strings;
 
 public class MyAtoi {
     public static void main(String[] args) {
-        String s = "-91283472332";
+        String s = "-912834723326868";
         int ans = myAtoi(s);
         System.out.println(ans);
 
