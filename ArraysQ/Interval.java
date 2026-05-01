@@ -10,7 +10,7 @@ public class Interval {
         int[][] arr = {{1, 2}, {2, 6}, {8, 10}, {15, 18}};
         int[][] result = intervalArray(arr);
         for (int[] i : result) {
-            System.out.println(Arrays.toString(i) + " ");
+            System.out.println(Arrays.toString(i));
         }
 
     }
