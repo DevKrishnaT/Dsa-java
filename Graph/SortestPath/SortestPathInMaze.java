@@ -18,6 +18,7 @@ public class SortestPathInMaze {
     static void main(String[] args) {
         int[][] grid = {{0, 0, 0}, {1, 1, 0}, {1, 1, 0}};
         int ans = shortestPathBinaryMatrix(grid);
+        System.out.println(ans);
     }
 
     private static int shortestPathBinaryMatrix(int[][] grid) {
@@ -27,7 +28,7 @@ public class SortestPathInMaze {
             return -1;
 
         }
-       
+
 
         Queue<pair> q = new LinkedList<>();
         q.offer(new pair(0, 0, 1));
