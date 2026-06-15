@@ -20,6 +20,6 @@ public class maxprofit {
 
         }
         return profit;
-        ;
+        
     }
 }
