@@ -11,30 +11,29 @@ public class SupperDigit {
     }
 
     private static int superDigit(String num, int k) {
-        int Afterk = 0;
+        long Afterk = 0;
 
         for (char c : num.toCharArray()) {
-            System.out.println(c - '0');
             Afterk += c - '0';
         }
         Afterk *= k;
         if (Afterk < 10) {
-            return Afterk;
+            return (int) Afterk;
         }
-        return recursive(Afterk);
+        return (int) recursive(Afterk);
     }
 
-    private static int recursive(int num) {
+    private static long recursive(long num) {
         if (num < 10) {
             return num;
         }
 
-        int sum = 0;
+        long sum = 0;
         while (num > 0) {
             sum += num % 10;
             num /= 10;
         }
-        return sum;
+        return recursive(sum);
     }
 
 
