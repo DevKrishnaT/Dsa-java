@@ -15,6 +15,7 @@ public class Merge {
         int point1 = 0;
         int point2 = 0;
         int i = 0;
+
         int[] ans = new int[m + n];
         while (point1 < m && point2 < n) {
             if (nums1[point1] < nums2[point2]) {
