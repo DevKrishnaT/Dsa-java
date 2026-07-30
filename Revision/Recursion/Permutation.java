@@ -35,6 +35,7 @@ public class Permutation {
                 solve(nums, list, set, sub);
                 sub.remove(sub.size() - 1);
                 set.remove(num);
+                ;
             }
         }
 
