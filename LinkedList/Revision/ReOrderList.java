@@ -28,6 +28,7 @@ public class ReOrderList {
         ListNode prev = null;
         ListNode curr = slow.next;
         slow.next = null;
+        ;
 
         while (curr != null) {
             ListNode next = curr.next;
