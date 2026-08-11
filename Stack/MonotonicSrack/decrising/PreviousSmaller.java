@@ -1,31 +1,31 @@
 package Stack.MonotonicSrack.decrising;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Stack;
 
-public class FinalPrices {
+public class PreviousSmaller {
     static void main(String[] args) {
-        int[] prices = {10, 1, 1, 6};
-        int[] ans = finalPrices(prices);
+        int[] num = {2, 4, 1, 6};
+
+        int[] ans = previousSmaller(num);
         System.out.println(Arrays.toString(ans));
     }
 
-    private static int[] finalPrices(int[] prices) {
+    private static int[] previousSmaller(int[] nums) {
+        int[] ans = new int[nums.length];
         Stack<Integer> stack = new Stack<>();
-        int[] ans = new int[prices.length];
-        for (int i = prices.length - 1; i >= 0; i--) {
-            int num = prices[i];
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
             while (!stack.isEmpty() && stack.peek() > num) {
                 stack.pop();
             }
 
             if (stack.isEmpty()) {
-                ans[i] = prices[i];
+                ans[i] = nums[i];
             } else {
-                ans[i] = prices[i] - stack.peek();
+                ans[i] = stack.peek();
             }
-            stack.push(prices[i]);
+            stack.push(num);
         }
 
         return ans;
