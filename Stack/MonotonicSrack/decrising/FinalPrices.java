@@ -9,15 +9,6 @@ public class FinalPrices {
     }
 
     private static int[] finalPrices(int[] prices) {
-        Stack<Integer> stack = new Stack<>();
-
-        for (int i = prices.length - 1; i >= 0; i--) {
-            int num = prices[i];
-            while (!stack.isEmpty() && stack.peek() >= num) {
-                stack.pop();
-            }
-
-
-        }
+        return new int[]{};
     }
 }
