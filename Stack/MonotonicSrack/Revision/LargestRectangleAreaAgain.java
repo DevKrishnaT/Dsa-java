@@ -29,6 +29,7 @@ public class LargestRectangleAreaAgain {
             stack.push(i);
         }
         stack.clear();
+        ;
 
         for (int i = 0; i < n; i++) {
             while (!stack.isEmpty() && heights[stack.peek()] > heights[i]) {
