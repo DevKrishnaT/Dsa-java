@@ -27,8 +27,7 @@ public class LargestRectangleArea {
             }
 
             stack.push(i);
-            ;
-
+            
 
         }
         stack.clear();
