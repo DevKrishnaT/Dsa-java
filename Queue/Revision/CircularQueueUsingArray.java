@@ -52,5 +52,12 @@ public class CircularQueueUsingArray {
         CircularQueue queue = new CircularQueue(5);
 
         queue.Enqueue(10);
+        queue.Enqueue(20);
+        queue.Enqueue(30);
+        queue.Enqueue(40);
+        queue.Enqueue(50);
+        queue.Enqueue(20);
+        System.out.println(queue.dequeue());
+        queue.Enqueue(20);
     }
 }
