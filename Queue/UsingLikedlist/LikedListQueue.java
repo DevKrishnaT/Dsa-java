@@ -26,7 +26,6 @@ class LikedQueue {
 
     public int Dequeue() {
         if (isEmpty()) {
-
             return -1;
         }
 
