@@ -18,7 +18,31 @@ class CirQueue {
 
 
     void add(int value) {
-        
+        if (isFull()) {
+            System.out.println("size is full");
+            return;
+        }
+
+
+        arr[rear] = value;
+        rear = (rear + 1) % capacity;
+        size++;
+
+    }
+
+    int remove() {
+        if (isEmpty()) {
+            return -1;
+        }
+
+
+        int value = arr[front];
+
+        front = (front + 1) % capacity;
+
+        size--;
+
+        return value;
     }
 
     boolean isEmpty() {
