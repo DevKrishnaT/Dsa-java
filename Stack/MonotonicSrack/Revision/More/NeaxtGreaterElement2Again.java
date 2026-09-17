@@ -26,6 +26,7 @@ public class NeaxtGreaterElement2Again {
             if (i < n) {
                 stack.push(i);
             }
+            ;
         }
 
         return ans;
