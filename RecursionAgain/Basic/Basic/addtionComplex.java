@@ -8,6 +8,7 @@ class Complex {
         this.real = real;
 
         this.imaginary = imaginary;
+        ;
     }
 
 
