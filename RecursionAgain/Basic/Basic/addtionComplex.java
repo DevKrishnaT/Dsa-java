@@ -6,6 +6,7 @@ class Complex {
 
     Complex(int real, int imaginary) {
         this.real = real;
+        ;
         this.imaginary = imaginary;
     }
 
