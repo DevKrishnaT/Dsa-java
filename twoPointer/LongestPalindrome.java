@@ -17,6 +17,7 @@ public class LongestPalindrome {
         }
 
         return s.substring(start, end + 1);
+        ;
     }
 
     private void expand(String s, int left, int right) {
