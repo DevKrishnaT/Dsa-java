@@ -2,7 +2,7 @@ package twoPointer;
 
 public class LongestPalindrome {
     void main(String[] args) {
-        String s = "babad";
+        String s = "RACECAR";
         String ans = longestPalindrome(s);
         System.out.println(ans);
     }
