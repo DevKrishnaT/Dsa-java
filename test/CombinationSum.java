@@ -6,7 +6,7 @@ import java.util.List;
 public class CombinationSum {
     static void main(String[] args) {
         int[] nums = {2, 3, 6, 7};
-        int target = 7;
+        int target = 8;
         List<List<Integer>> ans = combinationSum(nums, target);
         System.out.println(ans);
     }
@@ -20,6 +20,7 @@ public class CombinationSum {
     private static void combinations(int[] nums, List<List<Integer>> list, ArrayList<Integer> candidates, int target, int sum, int i) {
         if (i > nums.length - 1 || sum > target) {
             return;
+
         }
 
         if (sum == target) {
