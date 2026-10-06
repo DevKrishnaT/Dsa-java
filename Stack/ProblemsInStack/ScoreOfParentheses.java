@@ -5,6 +5,7 @@ import java.util.Stack;
 public class ScoreOfParentheses {
     static void main(String[] args) {
         String s = "((()))(())()";
+       
         int ans = scoreOfParentheses(s);
         System.out.println(ans);
     }
