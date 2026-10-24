@@ -33,7 +33,7 @@ public class Codec {
     public static TreeNode deserialize(String data) {
         String[] nodes = data.split(" ");
         int[] index = {0};
-        
+
         return deserializeHelper(nodes, index);
     }
 
